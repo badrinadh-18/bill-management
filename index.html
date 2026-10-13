@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>InvoiceHub · Commercial Billing &amp; Inventory Suite</title>
+
+  <!-- Fonts: Inter + JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Glassmorphism Stylesheet -->
+
+  <link rel="stylesheet" href="/src/style.css" />
+  <link rel="manifest" href="./manifest.json" />
+
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="InvoiceHub" />
+</head>
+
+<body>
+
+  <!-- ══════════════ LANDING PAGE ══════════════ -->
+  <div id="landingPage">
+
+    <!-- Landing Navigation -->
+    <nav class="landing-nav" id="landingNav">
+      <a class="landing-nav-brand" onclick="scrollToSection('landingHero')">
+        <div class="landing-nav-logo">IH</div>
+        <span class="landing-nav-name">InvoiceHub</span>
+      </a>
+
+      <div class="landing-nav-links" id="landingNavLinks">
+        <a onclick="scrollToSection('landingFeatures')">Features</a>
+        <a onclick="scrollToSection('landingAbout')">About</a>
+        <a onclick="scrollToSection('landingContact')">Contact</a>
+      </div>
+
+      <div class="landing-nav-cta">
+        <button class="icon-glass-btn" id="themeToggleLanding" onclick="toggleTheme()" title="Toggle Theme"
+          style="width:40px;height:40px;font-size:16px;">🌙</button>
+        <button class="landing-btn-signin" onclick="goToSignIn()">Sign In</button>
+        <button class="landing-btn-register" onclick="goToRegister()">Get Started Free</button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="landing-hero" id="landingHero">
+      <div class="landing-hero-badge">✨ #1 Commercial Billing Platform</div>
+      <h1>
+        Manage Invoices &amp;<br>
+        Inventory with <span class="gradient-text">InvoiceHub</span>
+      </h1>
+      <p class="landing-hero-sub">
+        Create professional commercial invoices, track real-time stock levels, and gain powerful financial insights —
+        all from one beautiful, cloud-synced dashboard.
+      </p>
+      <div class="landing-hero-actions">
+        <button class="landing-hero-btn-primary" onclick="goToRegister()">
+          🚀 Start Free Account
+        </button>
+        <button class="landing-hero-btn-secondary" onclick="scrollToSection('landingFeatures')">
+          📖 Explore Features
+        </button>
+      </div>
+
+      <!-- Mockup Preview -->
+      <div class="landing-hero-preview">
+        <div class="landing-hero-preview-inner">
+          <div class="preview-stats-row">
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Sales Revenue</div>
+              <div class="preview-stat-value blue">₹4,52,800</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Procurement Cost</div>
+              <div class="preview-stat-value orange">₹2,18,340</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Net Profit</div>
+              <div class="preview-stat-value green">₹2,34,460</div>
+            </div>
+            <div class="preview-stat-card">
+              <div class="preview-stat-label">Active Invoices</div>
+              <div class="preview-stat-value purple">147</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="landing-section" id="landingFeatures">
+      <div class="landing-section-header">
+        <div class="landing-section-badge">⚡ Core Features</div>
+        <div class="landing-section-title">Everything You Need to Run Your Business</div>
+        <div class="landing-section-sub">
+          From invoicing to inventory — InvoiceHub provides a complete commercial billing solution built for modern
+          businesses.
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon blue">🧾</div>
+          <div class="feature-title">Professional Invoicing</div>
+          <div class="feature-desc">Generate stunning commercial sale invoices with custom line items, rates, discounts,
+            and payment tracking — print or download as PDF instantly.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green">📦</div>
+          <div class="feature-title">Real-Time Inventory</div>
+          <div class="feature-desc">Automatically track stock levels computed from purchases and sales. Get instant
+            low-stock alerts and threshold-based notifications.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon orange">📊</div>
+          <div class="feature-title">Executive Dashboard</div>
+          <div class="feature-desc">View revenue, procurement costs, net profit, and pending receivables at a glance
+            with beautiful interactive charts and analytics.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon purple">📅</div>
+          <div class="feature-title">Fiscal Year Auditing</div>
+          <div class="feature-desc">Monthly breakdowns of sales, expenses, and net margins. Export detailed fiscal year
+            reports as CSV for your accountant.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon red">☁️</div>
+          <div class="feature-title">Cloud Sync &amp; Backup</div>
+          <div class="feature-desc">All your data is securely synced to the cloud via Firebase. Access your invoices and
+            inventory from any device, anytime.</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue">🛒</div>
+          <div class="feature-title">Customer Portal</div>
+          <div class="feature-desc">Let your customers search and view their own invoice receipts through a dedicated
+            self-service portal — no login required.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="landing-section" id="landingAbout">
+      <div class="landing-section-header">
+        <div class="landing-section-badge">🏢 About Us</div>
+        <div class="landing-section-title">Built for Businesses That Move Fast</div>
+        <div class="landing-section-sub">
+          InvoiceHub is designed by entrepreneurs, for entrepreneurs — bringing enterprise-level billing tools to small
+          and medium businesses.
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-content">
+          <h3>Your Trusted Commercial Billing Partner</h3>
+          <p>
+            We understand the challenges of managing invoices, tracking inventory, and keeping financial records
+            organized. InvoiceHub was created to eliminate spreadsheet chaos and give you a professional, real-time
+            solution.
+          </p>
+          <p>
+            Whether you're a retailer, wholesaler, or service provider — our platform adapts to your workflow. Create
+            invoices, log purchases, manage stock, and generate fiscal reports — all in one place.
+          </p>
+          <div class="about-stats">
+            <div class="about-stat-item">
+              <div class="about-stat-number blue">10K+</div>
+              <div class="about-stat-label">Invoices Generated</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-number green">500+</div>
+              <div class="about-stat-label">Active Businesses</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-number orange">99.9%</div>
+              <div class="about-stat-label">Uptime Guarantee</div>
+            </div>
+            <div class="about-stat-item">
+              <div class="about-stat-number purple">24/7</div>
+              <div class="about-stat-label">Cloud Availability</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-visual">
+          <div class="about-visual-item">
+            <div class="about-visual-icon" style="background:var(--blue-subtle);">🚀</div>
+            <div class="about-visual-text">
+              <strong>Lightning Fast Setup</strong>
+              <span>Register and start creating invoices in under 2 minutes</span>
+            </div>
+          </div>
+          <div class="about-visual-item">
+            <div class="about-visual-icon" style="background:var(--green-subtle);">🔒</div>
+            <div class="about-visual-text">
+              <strong>Secure &amp; Private</strong>
+              <span>PIN-protected access with encrypted cloud storage</span>
+            </div>
+          </div>
+          <div class="about-visual-item">
+            <div class="about-visual-icon" style="background:var(--orange-subtle);">📱</div>
+            <div class="about-visual-text">
+              <strong>Works Everywhere</strong>
+              <span>Progressive Web App — install on any device</span>
+            </div>
+          </div>
+          <div class="about-visual-item">
+            <div class="about-visual-icon" style="background:var(--purple-subtle);">💬</div>
+            <div class="about-visual-text">
+              <strong>WhatsApp Sharing</strong>
+              <span>Share invoices directly with customers via WhatsApp</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="landing-section" id="landingContact">
+      <div class="landing-section-header">
+        <div class="landing-section-badge">💬 Get In Touch</div>
+        <div class="landing-section-title">Contact Us</div>
+        <div class="landing-section-sub">
+          Have questions, suggestions, or need support? We'd love to hear from you.
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-wrap">
+          <h3>Let's Connect</h3>
+          <p>Whether you need help getting started, have a feature request, or want to partner with us — reach out and
+            we'll respond promptly.</p>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">📧</div>
+            <div class="contact-detail-text">
+              <strong>Email</strong>
+              <span id="landingContactEmail">contact@invoicehub.app</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <strong>Phone / WhatsApp</strong>
+              <span id="landingContactPhone">+91 98765 43210</span>
+            </div>
+          </div>
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <strong>Address</strong>
+              <span id="landingContactAddress">India</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <h4>Send Us a Message</h4>
+          <div class="contact-form-group">
+            <label for="contactFormName">Your Name</label>
+            <input class="contact-form-input" id="contactFormName" type="text" placeholder="Enter your full name">
+          </div>
+          <div class="contact-form-group">
+            <label for="contactFormEmail">Your Email</label>
+            <input class="contact-form-input" id="contactFormEmail" type="email" placeholder="you@example.com">
+          </div>
+          <div class="contact-form-group">
+            <label for="contactFormMessage">Message</label>
+            <textarea class="contact-form-input" id="contactFormMessage" placeholder="How can we help you?"></textarea>
+          </div>
+          <button class="contact-form-submit" onclick="submitContactForm()">Send Message →</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="landing-footer">
+      <p>© 2026 <a href="#">InvoiceHub</a> — Commercial Billing &amp; Inventory Suite. All rights reserved.</p>
+    </footer>
+
+  </div>
+  <!-- /landingPage -->
+
+  <!-- ══════════════ AMBIENT AURORA MESH BACKGROUND ══════════════ -->
+  <div class="glass-mesh-bg">
+    <div class="mesh-orb orb-1"></div>
+    <div class="mesh-orb orb-2"></div>
+    <div class="mesh-orb orb-3"></div>
+  </div>
+
+  <!-- ══════════════ LOCK SCREEN ══════════════ -->
+  <div id="lockScreen">
+    <div class="lock-card">
+
+      <!-- Dark mode toggle on lock screen -->
+      <button id="themeToggleLock" class="icon-glass-btn" onclick="toggleTheme()"
+        style="position:absolute;top:1rem;right:1rem;" title="Toggle Theme">🌙</button>
+
+      <div class="lock-logo">IH</div>
+      <div class="lock-title" id="lockBusinessName">InvoiceHub</div>
+
+      <!-- Portal Options -->
+      <div id="lockOptions">
+        <div class="lock-sub">Commercial Invoicing &amp; Real-Time Inventory Control.<br>Choose your portal to continue:
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;margin-top:1rem;">
+          <button class="lock-btn glass-btn primary" onclick="showAdminLogin()">
+            🔑 Administrator Login
+          </button>
+          <button class="lock-btn glass-btn"
+            style="background:var(--orange);color:#fff;border-color:rgba(255,255,255,0.25);"
+            onclick="showCustomerSearch()">
+            🛒 Customer Invoices Portal
+          </button>
+          <button class="glass-btn" style="margin-top:6px;width:100%;justify-content:center;"
+            onclick="returnToLanding()">
+            🏠 Back to Home Page
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Login -->
+      <div id="lockAdmin" style="display:none">
+        <div class="lock-sub">Sign in with the email and PIN you registered with.</div>
+        <input class="lock-input" id="lockEmail" type="email" placeholder="Admin email" autocomplete="email" />
+        <input class="lock-input" id="lockPw" type="password" placeholder="Admin PIN" autocomplete="current-password" />
+        <button class="lock-btn glass-btn primary" onclick="tryUnlock()">🔓 Login</button>
+        <div class="lock-error" id="lockError"></div>
+        <button class="glass-btn" style="margin-top:4px;width:100%;justify-content:center;"
+          onclick="showAdminRegister()">New here? Register</button>
+        <button class="glass-btn" style="margin-top:8px;width:100%;justify-content:center;"
+          onclick="showForgotPin()">Forgot PIN?</button>
+        <button class="glass-btn" style="margin-top:12px;width:100%;justify-content:center;"
+          onclick="showLockOptions()">← Back to Portals</button>
+        <button class="glass-btn" style="margin-top:6px;width:100%;justify-content:center;"
+          onclick="returnToLanding()">🏠 Back to Home Page</button>
+      </div>
+
+      <!-- New Admin Registration -->
+      <div id="lockRegister" style="display:none">
+        <div class="lock-sub">Create your account and business profile. These details will appear on your invoices.
+        </div>
+        <input class="lock-input" id="registerName" type="text" placeholder="Your name" autocomplete="name" />
+        <input class="lock-input" id="registerBusinessName" type="text" placeholder="Business name" />
+        <input class="lock-input" id="registerEmail" type="email" placeholder="Admin email" autocomplete="email" />
+        <input class="lock-input" id="registerPhone" type="tel" placeholder="Phone / WhatsApp" autocomplete="tel" />
+        <textarea class="lock-input" id="registerAddress" rows="1" placeholder="Business address"></textarea>
+        <button class="lock-btn glass-btn primary" onclick="showRegisterPin()">Continue</button>
+        <div class="lock-error" id="registerError"></div>
+        <button class="glass-btn" style="margin-top:12px;width:100%;justify-content:center;"
+          onclick="showAdminLogin()">← I already have an account</button>
+        <button class="glass-btn" style="margin-top:6px;width:100%;justify-content:center;"
+          onclick="returnToLanding()">🏠 Back to Home Page</button>
+      </div>
+
+      <!-- New Admin Registration: Security -->
+      <div id="lockRegisterPin" style="display:none">
+        <div class="lock-sub">Step 2 of 2 — secure your new admin account with a PIN.</div>
+        <input class="lock-input" id="registerPin" type="password" placeholder="Create a PIN (minimum 4 characters)"
+          autocomplete="new-password" />
+        <input class="lock-input" id="registerConfirmPin" type="password" placeholder="Confirm PIN"
+          autocomplete="new-password" />
+        <label
+          style="display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px;font-size:12px;color:var(--text2);cursor:pointer;">
+          <input type="checkbox" onchange="togglePinVisibility('registerPin', 'registerConfirmPin')" /> Show PIN
+        </label>
+        <button class="lock-btn glass-btn primary" onclick="registerAdmin()">Create Account &amp; Continue</button>
+        <div class="lock-error" id="registerPinError"></div>
+        <button class="glass-btn" style="margin-top:12px;width:100%;justify-content:center;"
+          onclick="showAdminRegister()">← Back to business details</button>
+      </div>
+
+      <!-- PIN Recovery -->
+      <div id="lockForgotPin" style="display:none">
+        <div class="lock-sub">Verify your registered email and phone number, then choose a new PIN.</div>
+        <input class="lock-input" id="forgotEmail" type="email" placeholder="Registered admin email"
+          autocomplete="email" />
+        <input class="lock-input" id="forgotPhone" type="tel" placeholder="Registered phone / WhatsApp"
+          autocomplete="tel" />
+        <input class="lock-input" id="forgotPin" type="password" placeholder="New PIN (minimum 4 characters)"
+          autocomplete="new-password" />
+        <input class="lock-input" id="forgotConfirmPin" type="password" placeholder="Confirm new PIN"
+          autocomplete="new-password" />
+        <label
+          style="display:flex;align-items:center;justify-content:center;gap:8px;margin:0 0 12px;font-size:12px;color:var(--text2);cursor:pointer;">
+          <input type="checkbox" onchange="togglePinVisibility('forgotPin', 'forgotConfirmPin')" /> Show PIN
+        </label>
+        <button class="lock-btn glass-btn primary" onclick="resetForgottenPin()">Reset PIN</button>
+        <div class="lock-error" id="forgotPinError"></div>
+        <button class="glass-btn" style="margin-top:12px;width:100%;justify-content:center;"
+          onclick="showAdminLogin()">← Back to login</button>
+      </div>
+
+      <!-- Customer Search -->
+      <div id="lockCustomer" style="display:none">
+        <div class="lock-sub">Access your personal invoice receipts &amp; history</div>
+        <input class="lock-input" id="customerNameInput" type="text" placeholder="Your full name or mobile number" />
+        <button class="lock-btn glass-btn"
+          style="background:var(--orange);color:#fff;border-color:rgba(255,255,255,0.25);"
+          onclick="searchCustomerBills()">🔍 Search My Invoices</button>
+        <div class="lock-error" id="customerError"></div>
+        <button class="glass-btn" style="margin-top:12px;width:100%;justify-content:center;"
+          onclick="showLockOptions()">← Back to Portals</button>
+        <button class="glass-btn" style="margin-top:6px;width:100%;justify-content:center;"
+          onclick="returnToLanding()">🏠 Back to Home Page</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════ REAL-TIME SYNC INDICATOR ══════════════ -->
+  <div id="syncIndicator"><span class="sync-spin">↻</span> Syncing Cloud Data...</div>
+
+  <!-- ══════════════ CUSTOMER PORTAL ══════════════ -->
+  <div id="customerPortal" style="display:none;position:relative;z-index:2;">
+    <header class="glass-header">
+      <div class="header-left">
+        <div class="sidebar-logo" style="background:linear-gradient(135deg,var(--orange),#f97316);">IH</div>
+        <div class="header-title-wrap">
+          <div class="header-title" id="customerBusinessName">InvoiceHub</div>
+          <div class="header-date-ticker">Customer Billing Portal</div>
+        </div>
+      </div>
+      <div class="header-actions">
+        <span class="badge-pill badge-purchase" style="padding:5px 12px;font-size:11.5px;">
+          👋 <strong id="portalCustomerName"></strong>
+        </span>
+        <button id="themeToggleCustomer" class="icon-glass-btn" onclick="toggleTheme()" title="Toggle Theme">🌙</button>
+        <button class="glass-btn danger" onclick="logout()">⎋ Logout</button>
+      </div>
+    </header>
+
+    <section class="page active" style="max-width:1100px;margin:0 auto;">
+      <div class="page-header">
+        <div>
+          <div class="page-title">My Invoices &amp; Receipts</div>
+          <div class="page-subtitle">View and download your official commercial bills</div>
+        </div>
+      </div>
+      <div class="glass-table-wrap">
+        <div class="table-responsive">
+          <table class="bills-table">
+            <thead>
+              <tr>
+                <th>Invoice #</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Total Billed</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="customerBillsBody"></tbody>
+          </table>
+        </div>
+        <div id="customerBillsEmpty" class="empty-state" style="display:none">
+          <div class="empty-icon">📄</div>
+          <div class="empty-title">No invoices found</div>
+          <div class="empty-sub">We couldn't find any invoices matching the name entered.</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ══════════════ MAIN GLASS SHELL APPLICATION ══════════════ -->
+  <div id="mainApp" style="display:none">
+    <div class="glass-app-shell">
+
+      <!-- ── Left Glass Sidebar Navigation ── -->
+      <aside class="glass-sidebar">
+        <div class="sidebar-brand" onclick="showPage('dash')">
+          <div class="sidebar-logo">IH</div>
+          <div class="sidebar-brand-name">
+            InvoiceHub
+            <span class="sidebar-brand-sub" id="sidebarBusinessName">InvoiceHub</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section-label">Financial Deck</div>
+          <a class="glass-nav-item active" onclick="showPage('dash')" id="tab-dash">
+            <span class="nav-icon">📊</span>
+            <span>Dashboard</span>
+          </a>
+          <a class="glass-nav-item" onclick="showPage('bills')" id="tab-bills">
+            <span class="nav-icon">🗂</span>
+            <span>All Invoices</span>
+            <span class="nav-badge" id="billCountBadge">0</span>
+          </a>
+          <a class="glass-nav-item" onclick="showPage('yearly')" id="tab-yearly">
+            <span class="nav-icon">📅</span>
+            <span>Fiscal Auditing</span>
+          </a>
+          <a class="glass-nav-item" onclick="showPage('stock')" id="tab-stock">
+            <span class="nav-icon">📦</span>
+            <span>Stock Inventory</span>
+          </a>
+
+          <div class="nav-section-label admin-only">Quick Entries</div>
+          <a class="glass-nav-item admin-only" onclick="showPage('form'); resetForm('sale')" id="tab-form">
+            <span class="nav-icon">🧾</span>
+            <span>+ Sale Bill</span>
+          </a>
+          <a class="glass-nav-item admin-only" onclick="showPage('purchaseForm'); resetForm('purchase')"
+            id="tab-purchaseForm">
+            <span class="nav-icon">🛒</span>
+            <span>+ Purchase</span>
+          </a>
+
+          <div class="nav-section-label admin-only">Account</div>
+          <a class="glass-nav-item admin-only" onclick="showPage('settings')" id="tab-settings">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+          </a>
+          <a class="glass-nav-item admin-only" onclick="showPage('superadmin')" id="tab-superadmin">
+            <span class="nav-icon">🔐</span>
+            <span>Super Admin</span>
+          </a>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="user-profile-card" onclick="showPage('settings')" style="cursor:pointer;" title="Open Settings">
+            <div class="user-avatar">RE</div>
+            <div class="user-details">
+              <div class="user-name" id="adminName">InvoiceHub</div>
+              <div class="admin-email" id="adminEmail"></div>
+              <span id="roleBadge" class="role-badge">Admin</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ── Main Glass Canvas ── -->
+      <main class="glass-main">
+
+        <!-- Floating Glass Topbar -->
+        <header class="glass-header">
+          <div class="header-left">
+            <div class="header-title-wrap">
+              <div class="header-title" id="pageHeaderTitle">Executive Dashboard</div>
+              <div class="header-date-ticker" id="headerDateTicker">Commercial Accounting &amp; Stock Intelligence</div>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="glass-btn primary admin-only" onclick="openModal('newTypeModal')">
+              ✨ + New Entry
+            </button>
+            <button id="themeToggleAdmin" class="icon-glass-btn" onclick="toggleTheme()"
+              title="Toggle Dark / Light Mode">
+              🌙
+            </button>
+            <button class="icon-glass-btn" onclick="exportBackupJSON()" title="Download Full JSON Data Backup">
+              💾
+            </button>
+            <button class="glass-btn danger" onclick="logout()">
+              ⎋ Logout
+            </button>
+          </div>
+        </header>
+
+        <!-- Toast Notifications -->
+        <div class="toast-container" id="toastContainer"></div>
+
+        <!-- ══════════════ 1. DASHBOARD PAGE ══════════════ -->
+        <div class="page active" id="dashPage">
+          <div class="page-header dash-header-wrap">
+            <div>
+              <div class="dash-hero-badge"><span class="pulse-dot"></span> Real-Time Financial Intelligence</div>
+              <div class="page-title">Executive Financial Overview</div>
+              <div class="page-subtitle">Real-time revenue, procurement expenses, and net profit margins</div>
+            </div>
+            <div class="dash-controls-wrap">
+              <div class="dash-date-capsule">
+                <span class="dash-capsule-icon">📅</span>
+                <input type="date" id="dashFromDate" onchange="refreshDash()" class="dash-date-input"
+                  title="Start Date" />
+                <span class="dash-capsule-sep">→</span>
+                <input type="date" id="dashToDate" onchange="refreshDash()" class="dash-date-input" title="End Date" />
+              </div>
+              <div class="dash-preset-group">
+                <button class="dash-preset-btn active" id="presetBtnMonth" onclick="setDashPreset('month')">This
+                  Month</button>
+                <button class="dash-preset-btn" id="presetBtn30d" onclick="setDashPreset('30d')">30 Days</button>
+                <button class="dash-preset-btn" id="presetBtnFy" onclick="setDashPreset('fy')">Fiscal Year</button>
+                <button class="dash-preset-btn" id="presetBtnAll" onclick="setDashPreset('all')">All Time</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Low Stock Alert Banner -->
+          <div id="dashStockAlert" class="stock-alert-bar" style="display:none;margin-bottom:1.5rem;cursor:pointer;">
+          </div>
+
+          <!-- 4 Holographic Bento Metric Cards -->
+          <div class="stats-row">
+            <div class="stat-glass-card blue">
+              <div class="stat-ambient-glow blue"></div>
+              <div class="stat-header">
+                <div class="stat-label-wrap">
+                  <div class="stat-icon-wrap blue">📈</div>
+                  <span class="stat-label">Sales Revenue</span>
+                </div>
+                <span class="stat-pill-tag blue">● Inflow</span>
+              </div>
+              <div class="stat-value blue" id="statSales">₹0.00</div>
+              <div class="stat-footer">
+                <span class="stat-sub" id="statSalesSub">Total customer sales</span>
+                <span class="stat-spark-icon blue">↗</span>
+              </div>
+            </div>
+
+            <div class="stat-glass-card red">
+              <div class="stat-ambient-glow red"></div>
+              <div class="stat-header">
+                <div class="stat-label-wrap">
+                  <div class="stat-icon-wrap red">🛒</div>
+                  <span class="stat-label">Procurement Cost</span>
+                </div>
+                <span class="stat-pill-tag red">● Outflow</span>
+              </div>
+              <div class="stat-value red" id="statPurchases">₹0.00</div>
+              <div class="stat-footer">
+                <span class="stat-sub" id="statPurchasesSub">Supplier expenditures</span>
+                <span class="stat-spark-icon red">↘</span>
+              </div>
+            </div>
+
+            <div class="stat-glass-card green">
+              <div class="stat-ambient-glow green"></div>
+              <div class="stat-header">
+                <div class="stat-label-wrap">
+                  <div class="stat-icon-wrap green">💼</div>
+                  <span class="stat-label">Net Operating Margin</span>
+                </div>
+                <span class="stat-pill-tag green">● Profit P&amp;L</span>
+              </div>
+              <div class="stat-value green" id="statProfit">₹0.00</div>
+              <div class="stat-footer">
+                <span class="stat-sub" id="statProfitSub">Revenue minus expenses</span>
+                <span class="stat-spark-icon green">★</span>
+              </div>
+            </div>
+
+            <div class="stat-glass-card orange">
+              <div class="stat-ambient-glow orange"></div>
+              <div class="stat-header">
+                <div class="stat-label-wrap">
+                  <div class="stat-icon-wrap orange">⏳</div>
+                  <span class="stat-label">Pending Receivables</span>
+                </div>
+                <span class="stat-pill-tag orange">● Uncollected</span>
+              </div>
+              <div class="stat-value orange" id="statDues">₹0.00</div>
+              <div class="stat-footer">
+                <span class="stat-sub">Outstanding buyer dues</span>
+                <span class="stat-spark-icon orange">⏳</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Action Bento Grid -->
+          <div class="dash-quick-grid">
+            <button class="dash-quick-tile blue admin-only" onclick="showPage('form'); resetForm('sale')">
+              <div class="dash-quick-tile-icon blue">🧾</div>
+              <div class="dash-quick-tile-info">
+                <div class="dash-quick-tile-title">+ Create Sale Invoice</div>
+                <div class="dash-quick-tile-sub">B2B GST &amp; Commercial Billing</div>
+              </div>
+              <span class="dash-quick-arrow">→</span>
+            </button>
+            <button class="dash-quick-tile red admin-only" onclick="showPage('purchaseForm'); resetForm('purchase')">
+              <div class="dash-quick-tile-icon red">🛒</div>
+              <div class="dash-quick-tile-info">
+                <div class="dash-quick-tile-title">+ Procurement Entry</div>
+                <div class="dash-quick-tile-sub">Supplier Purchases &amp; Inward Stock</div>
+              </div>
+              <span class="dash-quick-arrow">→</span>
+            </button>
+            <button class="dash-quick-tile purple" onclick="showPage('stock')">
+              <div class="dash-quick-tile-icon purple">📦</div>
+              <div class="dash-quick-tile-info">
+                <div class="dash-quick-tile-title">Real-Time Inventory</div>
+                <div class="dash-quick-tile-sub">Stock Reorder &amp; Item Tracking</div>
+              </div>
+              <span class="dash-quick-arrow">→</span>
+            </button>
+            <button class="dash-quick-tile green" onclick="exportYearlyCSV()">
+              <div class="dash-quick-tile-icon green">📊</div>
+              <div class="dash-quick-tile-info">
+                <div class="dash-quick-tile-title">Financial Audit Export</div>
+                <div class="dash-quick-tile-sub">Complete Monthly Ledger CSV</div>
+              </div>
+              <span class="dash-quick-arrow">⬇</span>
+            </button>
+          </div>
+
+          <!-- Interactive 6-Month Chart -->
+          <div class="glass-card dash-chart-card">
+            <div class="dash-chart-head">
+              <div>
+                <div class="dash-chart-title">
+                  <span>📊 6-Month Trajectory &amp; Cashflow Dynamic</span>
+                  <span class="dash-chart-badge">Live Analytics</span>
+                </div>
+                <div class="dash-chart-subtitle">Monthly comparison of commercial sales versus inward procurement
+                  expenses</div>
+              </div>
+              <div class="dash-chart-controls">
+                <div class="segmented-pill-toggle">
+                  <button type="button" class="segment-btn active" id="btnChartBar" onclick="setChartType('bar')">
+                    📊 Bar
+                  </button>
+                  <button type="button" class="segment-btn" id="btnChartLine" onclick="setChartType('line')">
+                    📈 Trend Line
+                  </button>
+                </div>
+                <input type="hidden" id="chartToggle" value="bar" />
+              </div>
+            </div>
+            <div class="dash-chart-canvas-wrap">
+              <canvas id="salesChart"></canvas>
+            </div>
+          </div>
+
+          <!-- Recent Entries Glass Table -->
+          <div class="glass-table-wrap dash-table-card">
+            <div class="dash-table-head">
+              <div class="dash-table-title-group">
+                <div class="dash-table-title">Recent Transactions</div>
+                <span class="dash-table-count-badge" id="dashRecentCount">Latest Invoices</span>
+              </div>
+              <div style="display:flex;gap:8px;align-items:center;">
+                <button class="glass-btn primary" style="height:32px;font-size:12px;" onclick="showPage('bills')">
+                  View All Invoices →
+                </button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="bills-table">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Client / Vendor</th>
+                    <th>Date</th>
+                    <th>Total (₹)</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="recentBillsBody"></tbody>
+              </table>
+            </div>
+            <div id="recentEmpty" class="empty-state" style="display:none">
+              <div class="empty-icon">📄</div>
+              <div class="empty-title">No transactions recorded yet</div>
+              <div class="empty-sub">Create your first sale or purchase bill to populate financial analytics.</div>
+              <button class="glass-btn primary admin-only" style="margin-top:12px;"
+                onclick="showPage('form'); resetForm('sale')">
+                + Create First Invoice
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════ 2. ALL INVOICES PAGE ══════════════ -->
+        <div class="page" id="billsPage">
+          <div class="page-header">
+            <div>
+              <div class="page-title">Commercial Invoices Directory</div>
+              <div class="page-subtitle">Search, filter, edit, clone, and export all sales &amp; procurement records
+              </div>
+            </div>
+            <div style="display:flex;gap:10px;">
+              <button class="glass-btn primary admin-only" onclick="openModal('newTypeModal')">+ New Entry</button>
+              <button class="glass-btn" onclick="exportBillsCSV()">⬇ Export CSV</button>
+            </div>
+          </div>
+
+          <!-- Glass Command & Filter Bar -->
+          <div class="glass-card" style="padding:1.25rem 1.5rem;margin-bottom:1.5rem;">
+            <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;justify-content:space-between;">
+              <div style="position:relative;flex:1;min-width:240px;max-width:340px;">
+                <input class="search-box" id="searchBox" placeholder="🔍 Search customer, town, bill #, item..."
+                  oninput="renderBillsList()" style="width:100%" />
+              </div>
+
+              <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
+                <!-- Segmented Type Filter -->
+                <div
+                  style="display:inline-flex;background:var(--glass-surface-elevated);border:1px solid var(--glass-border);border-radius:var(--radius);padding:3px;gap:2px;">
+                  <button class="glass-btn"
+                    style="height:32px;padding:0 12px;border:none;border-radius:6px;box-shadow:none;" data-filter="all"
+                    id="filterAll" onclick="setBillFilter('all')">All</button>
+                  <button class="glass-btn"
+                    style="height:32px;padding:0 12px;border:none;border-radius:6px;box-shadow:none;" data-filter="sale"
+                    id="filterSales" onclick="setBillFilter('sale')">Sales</button>
+                  <button class="glass-btn"
+                    style="height:32px;padding:0 12px;border:none;border-radius:6px;box-shadow:none;"
+                    data-filter="purchase" id="filterPurchases" onclick="setBillFilter('purchase')">Purchases</button>
+                </div>
+
+                <!-- Payment Status Filter -->
+                <select id="listPaymentStatus" onchange="renderBillsList()" class="search-box"
+                  style="width:135px;height:40px;padding:0 10px;">
+                  <option value="all">All Statuses</option>
+                  <option value="paid">✓ Paid</option>
+                  <option value="pending">⏳ Pending</option>
+                  <option value="partial">🟣 Partial</option>
+                </select>
+
+                <!-- Date Range -->
+                <div style="display:flex;gap:4px;align-items:center;">
+                  <input type="date" id="listFromDate" onchange="renderBillsList()" class="search-box"
+                    style="width:130px;height:40px;padding:0 8px;" />
+                  <span style="font-size:11px;font-weight:700;color:var(--text2)">to</span>
+                  <input type="date" id="listToDate" onchange="renderBillsList()" class="search-box"
+                    style="width:130px;height:40px;padding:0 8px;" />
+                </div>
+
+                <!-- Sorting -->
+                <select id="listSort" onchange="renderBillsList()" class="search-box"
+                  style="width:150px;height:40px;padding:0 8px;">
+                  <option value="dateDesc">Date: Newest</option>
+                  <option value="dateAsc">Date: Oldest</option>
+                  <option value="amountDesc">Amount: High → Low</option>
+                  <option value="amountAsc">Amount: Low → High</option>
+                  <option value="nameAsc">Name: A to Z</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Invoices Directory Table -->
+          <div class="glass-table-wrap">
+            <div class="table-responsive">
+              <table class="bills-table">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Client / Vendor</th>
+                    <th>Town / Location</th>
+                    <th>Date</th>
+                    <th>Total Billed</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="allBillsBody"></tbody>
+              </table>
+            </div>
+            <div id="allBillsEmpty" class="empty-state" style="display:none">
+              <div class="empty-icon">🔍</div>
+              <div class="empty-title">No matching invoices found</div>
+              <div class="empty-sub">Adjust your search keyword, date filters, or status selection.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════ 3. FISCAL YEARLY AUDITING PAGE ══════════════ -->
+        <div class="page" id="yearlyPage">
+          <div class="page-header">
+            <div>
+              <div class="page-title">Fiscal Year Summary &amp; Auditing</div>
+              <div class="page-subtitle">Monthly breakdown of sales revenue, expenses, and net profit margins</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <select id="yearSelect" onchange="renderYearly()" class="search-box"
+                style="width:120px;height:40px;padding:0 10px;"></select>
+              <button class="glass-btn" onclick="exportYearlyCSV()">⬇ Export Yearly CSV</button>
+            </div>
+          </div>
+
+          <div class="glass-table-wrap">
+            <div class="table-responsive">
+              <table class="bills-table">
+                <thead>
+                  <tr>
+                    <th>Fiscal Month</th>
+                    <th>Total Sales (₹)</th>
+                    <th>Purchases Incurred (₹)</th>
+                    <th>Net Margin (₹)</th>
+                    <th>Bills Count</th>
+                  </tr>
+                </thead>
+                <tbody id="yearlyTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════ 4. STOCK & INVENTORY PAGE ══════════════ -->
+        <div class="page" id="stockPage">
+          <div class="page-header">
+            <div>
+              <div class="page-title">Real-Time Inventory &amp; Stock Levels</div>
+              <div class="page-subtitle">Calculated automatically from recorded procurement purchases minus sales</div>
+            </div>
+            <div style="display:flex;gap:10px;align-items:center;">
+              <span style="font-size:12px;font-weight:700;color:var(--text2)">Low Stock Threshold:</span>
+              <select id="stockThreshold" onchange="renderStock()" class="search-box"
+                style="width:90px;height:40px;padding:0 8px;">
+                <option value="5">≤ 5</option>
+                <option value="10" selected>≤ 10</option>
+                <option value="25">≤ 25</option>
+                <option value="50">≤ 50</option>
+              </select>
+              <button class="glass-btn primary admin-only" onclick="showPage('purchaseForm'); resetForm('purchase')">+
+                Log Procurement</button>
+            </div>
+          </div>
+
+          <div id="stockAlertBar" class="stock-alert-bar hidden" style="margin-bottom:1.5rem"></div>
+
+          <div class="glass-table-wrap">
+            <div class="table-responsive">
+              <table class="bills-table">
+                <thead>
+                  <tr>
+                    <th>Stock Item Name</th>
+                    <th>Total In (Procured)</th>
+                    <th>Total Out (Sold)</th>
+                    <th>Available Balance</th>
+                    <th>Inventory Status</th>
+                  </tr>
+                </thead>
+                <tbody id="stockTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════ 5. SALE BILL FORM PAGE (INTERACTIVE BUILDER) ══════════════ -->
+        <div class="page" id="formPage">
+          <div id="formAreaWrap">
+            <div class="page-header">
+              <div>
+                <div class="page-title">New Commercial Sale Invoice</div>
+                <div class="page-subtitle">Generate official client billing invoices with custom rates and items</div>
+              </div>
+              <div style="display:flex;gap:8px;">
+                <button class="glass-btn admin-only" onclick="resetSaleSeq()" title="Reset sequence counter">↺ Reset #
+                  Seq</button>
+                <button class="glass-btn" onclick="clearAll()">Clear Form</button>
+                <button class="glass-btn primary" onclick="generateBill()">👁 Preview Invoice</button>
+              </div>
+            </div>
+
+            <!-- Client & Meta Details -->
+            <div class="glass-card">
+              <div class="glass-card-title">Client &amp; Invoice Metadata</div>
+              <div class="form-grid">
+                <div class="fg">
+                  <label>Invoice Number</label>
+                  <input type="text" id="billNo" placeholder="0001" readonly
+                    style="font-family:'JetBrains Mono',monospace;font-weight:800;" />
+                </div>
+                <div class="fg">
+                  <label>Billing Date</label>
+                  <input type="date" id="billDate" />
+                </div>
+                <div class="fg">
+                  <label>Buyer / Customer Name</label>
+                  <input type="text" id="buyerName" placeholder="Enter customer name" />
+                </div>
+                <div class="fg">
+                  <label>Town / Delivery Location</label>
+                  <input type="text" id="buyerVillage" placeholder="Enter town or address" />
+                </div>
+                <div class="fg">
+                  <label>Payment Status</label>
+                  <select id="paymentStatus">
+                    <option value="paid" selected>✓ Paid in Full</option>
+                    <option value="pending">⏳ Pending / Credit</option>
+                    <option value="partial">🟣 Partially Paid</option>
+                  </select>
+                </div>
+                <div class="fg">
+                  <label>Payment Method</label>
+                  <select id="paymentMode">
+                    <option value="cash" selected>💵 Cash</option>
+                    <option value="upi">📱 UPI / QR Transfer</option>
+                    <option value="bank">🏦 Direct Bank Transfer</option>
+                    <option value="cheque">📝 Cheque</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Line Items -->
+            <div class="glass-card">
+              <div class="glass-card-title">
+                <span>Invoice Line Items</span>
+                <button class="glass-btn" style="height:34px;font-size:12px;" onclick="addRow()">+ Add Line
+                  Item</button>
+              </div>
+              <div class="table-responsive">
+                <table class="itable">
+                  <colgroup>
+                    <col style="width:34%">
+                    <col style="width:14%">
+                    <col style="width:14%">
+                    <col style="width:18%">
+                    <col style="width:16%">
+                    <col style="width:4%">
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>Item Description</th>
+                      <th>Qty</th>
+                      <th>Unit</th>
+                      <th>Price Rate (₹)</th>
+                      <th style="text-align:right">Subtotal (₹)</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody id="itemsBody"></tbody>
+                </table>
+              </div>
+
+              <!-- Total & Discount Breakdown -->
+              <div style="display:flex;justify-content:flex-end;margin-top:1.5rem;">
+                <div style="width:320px;display:flex;flex-direction:column;gap:10px;">
+                  <div style="display:flex;justify-content:space-between;color:var(--text2);font-size:13.5px;">
+                    <span>Line Items Subtotal:</span>
+                    <span id="subtotalDisplay"
+                      style="font-family:'JetBrains Mono',monospace;font-weight:700;">₹0.00</span>
+                  </div>
+                  <div
+                    style="display:flex;justify-content:space-between;align-items:center;color:var(--text2);font-size:13.5px;">
+                    <span>Discount Deduction (₹):</span>
+                    <input type="number" id="billDiscount" value="0" min="0" step="1" oninput="updateGrand()"
+                      style="width:120px;height:34px;text-align:right;font-family:'JetBrains Mono',monospace;font-weight:700;" />
+                  </div>
+                  <div class="grand-row" style="margin-top:6px;">
+                    <span class="grand-lbl">Grand Total</span>
+                    <span class="grand-amt" id="grandTotalDisplay">₹0.00</span>
+                    <input type="hidden" id="grandTotal" value="0.00" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="acts">
+              <button class="glass-btn" onclick="clearAll()">Clear All</button>
+              <button class="glass-btn primary" onclick="generateBill()">👁 Preview &amp; Confirm Invoice</button>
+            </div>
+          </div>
+
+          <!-- Preview Voucher Overlay Card -->
+          <div id="billWrap" class="bill-wrap">
+            <div class="bill-header-row">
+              <div>
+                <div class="bill-co-name" id="billBusinessName">INVOICEHUB</div>
+                <div class="bill-co-sub" id="billBusinessDetails">Official Commercial Tax Invoice / Bill of Supply</div>
+              </div>
+              <div class="bill-meta-box">
+                <div class="bill-number-display">INVOICE #<span id="pBillNo">0001</span></div>
+                <div class="bill-date-display">Date: <span id="pDate"></span></div>
+                <div id="pPaymentStatusDisplay" style="margin-top:6px;"></div>
+              </div>
+            </div>
+
+            <div
+              style="background:var(--glass-surface);border:1px solid var(--glass-border);border-radius:var(--radius);padding:1rem 1.25rem;margin-bottom:1.5rem;">
+              <div
+                style="font-size:11px;font-weight:700;color:var(--text2);text-transform:uppercase;letter-spacing:0.04em;">
+                Billed To:</div>
+              <div style="font-size:16px;font-weight:800;color:var(--text);margin-top:2px;" id="pBuyerName"></div>
+              <div style="font-size:13px;color:var(--text2);" id="pVillage"></div>
+            </div>
+
+            <div class="table-responsive">
+              <table class="itable" style="width:100%">
+                <thead>
+                  <tr>
+                    <th style="width:30px">#</th>
+                    <th>Item Description</th>
+                    <th style="text-align:right">Qty</th>
+                    <th>Unit</th>
+                    <th style="text-align:right">Rate (₹)</th>
+                    <th style="text-align:right">Amount (₹)</th>
+                  </tr>
+                </thead>
+                <tbody id="pItems"></tbody>
+              </table>
+            </div>
+
+            <div style="display:flex;justify-content:flex-end;margin-top:1.5rem;">
+              <div class="grand-row" style="border:none;margin:0;">
+                <span class="grand-lbl">Total Payable</span>
+                <span class="grand-amt" id="pTotal">₹0.00</span>
+              </div>
+            </div>
+
+            <div id="pPaymentQr" class="bill-payment-qr" style="display:none">
+              <img id="pPaymentQrImage" alt="Scan to pay" />
+              <div><strong>Scan to Pay</strong><br><span>Use your preferred UPI/payment app</span></div>
+            </div>
+
+            <div id="savedIndicator"
+              style="display:none;color:var(--green);font-weight:800;font-size:14px;text-align:right;margin-top:8px;">
+              ✓ Saved securely to cloud database
+            </div>
+
+            <div class="acts" style="border-top:1px solid var(--glass-border);padding-top:1.5rem;margin-top:2rem;">
+              <button class="glass-btn" onclick="backToForm()">← Edit Invoice</button>
+              <button class="glass-btn primary admin-only" id="saveBillBtn" onclick="saveBill()">💾 Save Bill</button>
+              <button class="glass-btn" id="downloadBtn" onclick="downloadBill()">⬇ Download PDF</button>
+              <button class="glass-btn" onclick="window.print()">🖨 Print Invoice</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ══════════════ 6. PURCHASE BILL FORM PAGE ══════════════ -->
+        <div class="page" id="purchaseFormPage">
+          <div class="page-header">
+            <div>
+              <div class="page-title">Procurement / Purchase Entry</div>
+              <div class="page-subtitle">Log inventory items received from suppliers and vendors</div>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <button class="glass-btn admin-only" onclick="resetPurchaseSeq()">↺ Reset # Seq</button>
+              <button class="glass-btn" onclick="clearPurchaseAll()">Clear Form</button>
+              <button class="glass-btn primary admin-only" id="savePurchaseBtn" onclick="savePurchaseBill()">💾 Save
+                Purchase</button>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <div class="glass-card-title">Vendor &amp; Purchase Metadata</div>
+            <div class="form-grid">
+              <div class="fg">
+                <label>Purchase Bill Number</label>
+                <input type="text" id="pBillNoInput" placeholder="P0001" readonly
+                  style="font-family:'JetBrains Mono',monospace;font-weight:800;" />
+              </div>
+              <div class="fg">
+                <label>Purchase Date</label>
+                <input type="date" id="pBillDate" />
+              </div>
+              <div class="fg">
+                <label>Vendor / Supplier Company Name</label>
+                <input type="text" id="pCompanyName" placeholder="Enter vendor company name" />
+              </div>
+              <div class="fg">
+                <label>Vendor Address</label>
+                <input type="text" id="pAddress" placeholder="Enter supplier address" />
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card">
+            <div class="glass-card-title">
+              <span>Purchased Items &amp; Tax</span>
+              <button class="glass-btn" style="height:34px;font-size:12px;" onclick="addPurchaseRow()">+ Add Procurement
+                Item</button>
+            </div>
+            <div class="table-responsive">
+              <table class="itable">
+                <colgroup>
+                  <col style="width:28%">
+                  <col style="width:12%">
+                  <col style="width:12%">
+                  <col style="width:16%">
+                  <col style="width:14%">
+                  <col style="width:14%">
+                  <col style="width:4%">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>Item Name</th>
+                    <th>Qty</th>
+                    <th>Unit</th>
+                    <th>Base Price (₹)</th>
+                    <th>Tax %</th>
+                    <th style="text-align:right">Total (₹)</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="pItemsBody"></tbody>
+              </table>
+            </div>
+
+            <div class="grand-row">
+              <span class="grand-lbl">Total Procurement Cost</span>
+              <span class="grand-amt" id="pGrandTotalDisplay" style="color:var(--orange);">₹0.00</span>
+              <input type="hidden" id="pGrandTotal" value="0.00" />
+            </div>
+          </div>
+
+          <div class="acts">
+            <button class="glass-btn admin-only" onclick="clearPurchaseAll()">Clear</button>
+            <button class="glass-btn primary admin-only" onclick="savePurchaseBill()">💾 Save Purchase Record</button>
+          </div>
+        </div>
+
+        <!-- ══════════════ SETTINGS PAGE ══════════════ -->
+        <div class="page admin-only" id="settingsPage">
+          <div class="page-header">
+            <div>
+              <div class="page-title">Admin Settings</div>
+              <div class="page-subtitle">Manage your admin profile, credentials, and app preferences</div>
+            </div>
+          </div>
+
+          <div class="settings-layout">
+
+            <!-- ── Profile Card ── -->
+            <div class="settings-section glass-card">
+              <div class="settings-section-header">
+                <span class="settings-icon">👤</span>
+                <div>
+                  <div class="settings-section-title">Admin Profile</div>
+                  <div class="settings-section-sub">Your public business identity shown on invoices</div>
+                </div>
+              </div>
+              <div class="settings-fields">
+                <div class="form-group">
+                  <label class="form-label">Business / Admin Name</label>
+                  <input type="text" id="sNameInput" class="glass-input" placeholder="e.g. InvoiceHub" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Admin Email</label>
+                  <input type="email" id="sEmailInput" class="glass-input" placeholder="e.g. admin@example.com" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone / WhatsApp</label>
+                  <input type="tel" id="sPhoneInput" class="glass-input" placeholder="e.g. +91 9876543210" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Business Address</label>
+                  <textarea id="sAddressInput" class="glass-input" rows="3"
+                    placeholder="Full business address..."></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Payment QR Code</label>
+                  <input type="file" id="sQrInput" class="glass-input" accept="image/png,image/jpeg,image/webp"
+                    onchange="previewPaymentQr(this)" />
+                  <div class="settings-section-sub">Upload a QR code for customers to scan and pay from sale invoices.
+                  </div>
+                  <img id="sQrPreview" class="payment-qr-preview" alt="Payment QR preview" style="display:none" />
+                </div>
+              </div>
+            </div>
+
+            <!-- ── Security Card ── -->
+            <div class="settings-section glass-card">
+              <div class="settings-section-header">
+                <span class="settings-icon">🔐</span>
+                <div>
+                  <div class="settings-section-title">Security & Access</div>
+                  <div class="settings-section-sub">Change your admin PIN to keep access secure</div>
+                </div>
+              </div>
+              <div class="settings-fields">
+                <div class="form-group">
+                  <label class="form-label">Current PIN</label>
+                  <input type="password" id="sCurrentPin" class="glass-input" placeholder="Enter current PIN" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">New PIN</label>
+                  <input type="password" id="sNewPin" class="glass-input" placeholder="Enter new PIN" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Confirm New PIN</label>
+                  <input type="password" id="sConfirmPin" class="glass-input" placeholder="Repeat new PIN" />
+                </div>
+                <p style="font-size:12px;color:var(--text3);margin-top:-4px;">Leave PIN fields blank to keep your
+                  current PIN unchanged.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Save Button -->
+          <div class="settings-save-row">
+            <button class="glass-btn primary" style="min-width:180px;font-size:15px;padding:14px 28px;"
+              onclick="saveSettingsPage()">
+              💾 Save All Changes
+            </button>
+          </div>
+        </div>
+
+        <!-- ══════════════ SUPER ADMIN PANEL PAGE ══════════════ -->
+        <div class="page admin-only" id="superadminPage">
+          <div class="page-header">
+            <div>
+              <div class="page-title">🔐 Super Admin Panel</div>
+              <div class="page-subtitle">View and manage all registered user accounts, credentials, and business
+                profiles</div>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <button class="glass-btn" onclick="refreshSuperadminPanel()">↻ Refresh</button>
+              <button class="glass-btn primary" onclick="exportUsersCSV()">⬇ Export Users CSV</button>
+            </div>
+          </div>
+
+          <!-- Overview Stats -->
+          <div class="superadmin-stats-row">
+            <div class="superadmin-stat-card">
+              <div class="superadmin-stat-label">Total Users</div>
+              <div class="superadmin-stat-value blue" id="saStatTotalUsers">0</div>
+            </div>
+            <div class="superadmin-stat-card">
+              <div class="superadmin-stat-label">Total Invoices</div>
+              <div class="superadmin-stat-value green" id="saStatTotalInvoices">0</div>
+            </div>
+            <div class="superadmin-stat-card">
+              <div class="superadmin-stat-label">Recent (7 Days)</div>
+              <div class="superadmin-stat-value orange" id="saStatRecentUsers">0</div>
+            </div>
+          </div>
+
+          <!-- Search & Toolbar -->
+          <div class="user-mgmt-toolbar">
+            <input class="search-box" id="saUserSearch" placeholder="🔍 Search by name, email, phone, or business..."
+              oninput="renderSuperadminUsers()" style="width:100%;" />
+          </div>
+
+          <!-- Users Table -->
+          <div class="glass-table-wrap">
+            <div class="table-responsive">
+              <table class="bills-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Business Name</th>
+                    <th>Admin Name</th>
+                    <th>Email</th>
+                    <th>PIN</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="saUsersTableBody"></tbody>
+              </table>
+            </div>
+            <div id="saUsersEmpty" class="empty-state" style="display:none">
+              <div class="empty-icon">👥</div>
+              <div class="empty-title">No users found</div>
+              <div class="empty-sub">No registered accounts match your search criteria.</div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </div><!-- /mainApp -->
+
+  <!-- ── Super Admin User Edit Modal ── -->
+  <div class="user-edit-overlay" id="saEditOverlay">
+    <div class="user-edit-card">
+      <div class="user-edit-header">
+        <h3>✏️ Edit User Account</h3>
+        <button class="user-edit-close" onclick="closeSaEditModal()">×</button>
+      </div>
+      <div class="user-edit-fields">
+        <input type="hidden" id="saEditOriginalEmail" />
+        <div class="user-edit-field">
+          <label>Business Name</label>
+          <input type="text" id="saEditBusinessName" placeholder="Business name" />
+        </div>
+        <div class="user-edit-field">
+          <label>Admin Name</label>
+          <input type="text" id="saEditAdminName" placeholder="Admin name" />
+        </div>
+        <div class="user-edit-field">
+          <label>Email Address</label>
+          <input type="email" id="saEditEmail" placeholder="admin@example.com" />
+        </div>
+        <div class="user-edit-field">
+          <label>PIN / Password</label>
+          <input type="text" id="saEditPin" placeholder="Enter new PIN" />
+        </div>
+        <div class="user-edit-field">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" id="saEditPhone" placeholder="+91 9876543210" />
+        </div>
+        <div class="user-edit-field">
+          <label>Business Address</label>
+          <textarea id="saEditAddress" rows="2" placeholder="Full address"></textarea>
+        </div>
+      </div>
+      <div class="user-edit-actions">
+        <button class="glass-btn" onclick="closeSaEditModal()">Cancel</button>
+        <button class="glass-btn primary" onclick="saveSaEditUser()">💾 Save Changes</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Super Admin Delete Confirmation Modal ── -->
+  <div class="modal-overlay" id="saDeleteModal">
+    <div class="modal" style="max-width:440px">
+      <div class="modal-head">
+        <div class="modal-title" style="color:var(--red);">Delete User Account</div>
+        <button class="modal-close" onclick="closeModal('saDeleteModal')">×</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:14px;color:var(--text2);line-height:1.6">
+          Are you sure you want to permanently delete the account for <strong id="saDeleteUserEmail"
+            style="color:var(--text)"></strong>? This action cannot be undone.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="glass-btn" onclick="closeModal('saDeleteModal')">Cancel</button>
+        <button class="glass-btn danger" onclick="confirmSaDeleteUser()">Delete Permanently</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Super Admin Authentication Gate ── -->
+  <div class="superadmin-login-overlay" id="saLoginOverlay" style="display:none;">
+    <div class="superadmin-login-card">
+      <div class="lock-logo">🛡️</div>
+      <h3>Super Admin Access</h3>
+      <p>Enter the master password to access the admin panel.</p>
+      <input class="lock-input" id="saLoginPassword" type="password" placeholder="Master password"
+        style="margin-bottom:12px;" onkeydown="if(event.key==='Enter')verifySuperadminLogin()" />
+      <button class="lock-btn glass-btn primary" onclick="verifySuperadminLogin()" style="width:100%;">🔓 Unlock
+        Panel</button>
+      <div class="lock-error" id="saLoginError" style="margin-top:8px;"></div>
+      <button class="glass-btn" style="margin-top:12px;width:100%;justify-content:center;"
+        onclick="closeSuperadminLogin()">← Back</button>
+    </div>
+  </div>
+
+
+  <!-- ══════════════ FROSTED GLASS MODALS ══════════════ -->
+
+  <!-- 1. VIEW INVOICE MODAL -->
+  <div class="modal-overlay" id="viewModal">
+    <div class="modal" style="max-width:700px">
+      <div class="modal-head">
+        <div class="modal-title" id="viewModalTitle">Invoice Details</div>
+        <button class="modal-close" onclick="closeModal('viewModal')">×</button>
+      </div>
+      <div class="modal-body" id="viewModalBody"></div>
+      <div class="modal-footer">
+        <button class="glass-btn whatsapp" onclick="shareOnWhatsApp(currentViewId)">
+          💬 WhatsApp
+        </button>
+        <button class="glass-btn" onclick="printSavedBill(currentViewId)">🖨 Print</button>
+        <button class="glass-btn" id="modalDownloadBtn" onclick="downloadCurrentBill()">⬇ Download PDF</button>
+        <button class="glass-btn primary admin-only" onclick="editCurrentBill()">✏️ Edit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. DELETE CONFIRMATION MODAL -->
+  <div class="modal-overlay" id="deleteModal">
+    <div class="modal" style="max-width:440px">
+      <div class="modal-head">
+        <div class="modal-title" style="color:var(--red);">Delete Record Confirmation</div>
+        <button class="modal-close" onclick="closeModal('deleteModal')">×</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:14px;color:var(--text2);line-height:1.6">
+          Are you sure you wish to permanently delete invoice <strong id="deleteBillNoText"
+            style="color:var(--text)"></strong>? This transaction and its inventory calculations will be removed.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="glass-btn" onclick="closeModal('deleteModal')">Cancel</button>
+        <button class="glass-btn danger" onclick="confirmDelete()">Delete Permanently</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. NEW ENTRY SELECTOR MODAL -->
+  <div class="modal-overlay" id="newTypeModal">
+    <div class="modal" style="max-width:480px; text-align:center;">
+      <div class="modal-head">
+        <div class="modal-title">Select Entry Type</div>
+        <button class="modal-close" onclick="closeModal('newTypeModal')">×</button>
+      </div>
+      <div class="modal-body" style="display:flex; gap:16px; justify-content:center; padding:2rem 1.5rem;">
+        <button class="glass-btn primary" style="flex:1; height:88px; font-size:15px; flex-direction:column; gap:8px;"
+          onclick="closeModal('newTypeModal'); showPage('form'); resetForm('sale')">
+          <span style="font-size:26px;">🧾</span>
+          <span>Commercial Sale Bill</span>
+        </button>
+        <button class="glass-btn"
+          style="flex:1; height:88px; font-size:15px; flex-direction:column; gap:8px; background:var(--orange); color:#fff; border-color:rgba(255,255,255,0.3);"
+          onclick="closeModal('newTypeModal'); showPage('purchaseForm'); resetForm('purchase')">
+          <span style="font-size:26px;">🛒</span>
+          <span>Procurement Purchase</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- External Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" defer></script>
+
+  <!-- Application Logic -->
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
